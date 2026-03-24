@@ -2,13 +2,15 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
+  <!-- ======================================================= -->
+  <!-- 1. 网页元数据 (Meta Tags) 与 SEO 设置                        -->
+  <!-- 这些标签用于控制网页在搜索引擎和社交媒体(如Twitter)分享时的预览效果 -->
+  <!-- ======================================================= -->
   <meta name="description" content="QVGGT">
   <meta property="og:title" content="QVGGT: Post-Training Quantized Visual Geometry Grounded Transformer"/>
   <meta property="og:description" content="QVGGT: Post-Training Quantized Visual Geometry Grounded Transformer"/>
   <meta property="og:url" content="https://DDsacu.github.io/QVGGT"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- 分享时显示的预览图 -->
   <meta property="og:image" content="static/images/main.png" />
   <meta property="og:image:width" content="3840"/>
   <meta property="og:image:height" content="1920"/>
@@ -22,26 +24,32 @@
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+  <!-- 浏览器标签页名称 -->
   <title>QVGGT</title>
+  <!-- 浏览器标签页的小图标 (Favicon) -->
   <link rel="icon" type="image/x-icon" href="static/images/run.svg">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
+  
+  <!-- ======================================================= -->
+  <!-- 2. 样式表 (CSS) 引入                                     -->
+  <!-- ======================================================= -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css"> <!-- 核心排版框架 -->
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css"> <!-- 通用图标库 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"> <!-- 学术图标库 -->
+  <link rel="stylesheet" href="static/css/index.css"> <!-- 自定义样式 -->
 
+  <!-- ======================================================= -->
+  <!-- 3. 脚本 (JS) 引入                                        -->
+  <!-- ======================================================= -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <!-- MathJax 用于在网页中渲染 LaTeX 数学公式 -->
   <script>
     window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
   </script>
@@ -50,54 +58,18 @@
 </head>
 <body>
 
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    <div class="navbar-menu">
-      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-        <a class="navbar-item" href="https://steve-zeyu-zhang.github.io/">
-        <span class="icon">
-            <i class="fas fa-home"></i>
-        </span>
-        </a>
-  
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More Research
-          </a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://steve-zeyu-zhang.github.io/MotionMamba">
-              Motion Mamba
-            </a>
-            <a class="navbar-item" href="https://steve-zeyu-zhang.github.io/MotionAvatar">
-              Motion Avatar
-            </a>
-            <a class="navbar-item" href="https://steve-zeyu-zhang.github.io/InfiniMotion">
-              InfiniMotion
-            </a>
-            <a class="navbar-item" href="https://steve-zeyu-zhang.github.io/KMM">
-              KMM
-            </a>
-            </a>
-          </div>
-        </div>
-      </div>
-  
-    </div>
-  </nav>
-
-
+  <!-- ======================================================= -->
+  <!-- 5. 网页头部信息区 (Hero Section)：标题、作者、机构与资源链接 -->
+  <!-- ======================================================= -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><span class="viridis">QVGGT</span>: Post-Training Quantized Visual Geometry Grounded Transformer</h1>
+            <h1 class="title is-1 publication-title">
+              <img src="static/images/your_logo.png" alt="Logo" style="width: 1em; vertical-align: middle; margin-right: 10px;" />
+              <span>QVGGT</span>: Post-Training Quantized Visual Geometry Grounded Transformer
+            </h1>
             <h3 class="title is-3 publication-title"><a href="https://cvpr.thecvf.com/Conferences/2026" target="_blank" style="color: OrangeRed;">CVPR 2026</a></h3>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
@@ -111,31 +83,9 @@
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Paper link -->
-                      <!-- <span class="link-block">
-                        <a href="https://openreview.net/pdf/ae5d92318295aa49f1b14880d5b42a5f65f431f0.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span> -->
-
-                    <!-- Supplementary link -->
-                    <!-- <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span> -->
-
               <!-- ArXiv Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/" target="_blank"
+                  <a href="https://arxiv.org/abs/YOUR_ARXIV_ID" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -145,9 +95,8 @@
               </span>
 
                   <!-- Github link -->
-                  <!--
                   <span class="link-block">
-                    <a href="https://github.com/steve-zeyu-zhang/FlashMo" target="_blank"
+                    <a href="https://github.com/DDsacu/QVGGT" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -155,27 +104,14 @@
                     <span>Code</span>
                   </a>
                 </span>
-                -->
-
-                <!-- Hugging Face Link -->
-                  <!-- <span class="link-block">
-                    <a href="https://huggingface.co/papers/2503.06955" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <img src="static/images/hfbw.svg" style="width: 70%;">
-                    </span>
-                    <span>Hugging Face</span>
-                  </a>
-                </span> -->
 
                 <!-- Citation Link -->
                 <span class="link-block">
-                  <a href="static/scholar.html" target="_blank"
+                  <a href="#BibTeX"
                   class="external-link button is-normal is-rounded is-dark">
                   <span>BibTeX</span>
                 </a>
               </span>
-
                       
             </div>
           </div>          
@@ -201,18 +137,6 @@
   </div>
 </section> -->
 <!-- End teaser video -->
-
-
-<!-- News -->
-<div class="news">
-  <h2><font size="4"> <b>News:</b> </font></h2>
-  <ul>
-    <li><b>(02/21/2026)</b> &#127881; Our paper has been accepted to <a href="https://cvpr.thecvf.com/Conferences/2026"><b style="color: OrangeRed;">CVPR 2026</b></a>!</li>
-  </ul>
-</div>
-<!-- End News -->
-
-<p style="height: 50px;">&nbsp;</p>
 
 
 <!-- Paper abstract -->
@@ -242,6 +166,16 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- News -->
+<div class="news">
+  <h2><font size="4"> <b>News:</b> </font></h2>
+  <ul>
+    <li><b>(02/21/2026)</b> &#127881; Our paper has been accepted to <a href="https://cvpr.thecvf.com/Conferences/2026"><b style="color: OrangeRed;">CVPR 2026</b></a>!</li>
+  </ul>
+</div>
+<!-- End News -->
+
+<p style="height: 50px;">&nbsp;</p>
 
 
 <section class="hero is-small">
@@ -314,12 +248,7 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{zhang2026geoworld,
-  title={GeoWorld: Geometric World Models},
-  author={Zhang, Zeyu and Li, Danning and Reid, Ian and Hartley, Richard},
-  journal={arXiv preprint arXiv:2602.23058},
-  year={2026}
-}</code></pre>
+      <pre><code></code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
