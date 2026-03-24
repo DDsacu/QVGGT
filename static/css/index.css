@@ -11,6 +11,12 @@ body {
 .link-block a {
     margin-top: 5px;
     margin-bottom: 5px;
+    transition: background-color 0.3s ease; /* 添加平滑过渡效果 */
+}
+
+/* 按钮鼠标悬浮时的背景色变色效果 */
+.link-block a:hover {
+    background-color: rgb(54, 125, 189) !important;
 }
 
 .dnerf {
