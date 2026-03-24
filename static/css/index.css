@@ -147,22 +147,6 @@ eql-cntrb
 .news {
   width: 600px;
   margin: 0 auto; 
-}
-  font-size: 16px;
-  width: 45%;
-  text-align: center;
-}
-
-.my-hero-body {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-/* Container to hold the row of videos */
-.video-row {
-  display: flex; /* Align items horizontally */
-  justify-content: center; /* Center the entire row */
-  gap: 20px; /* Space between the videos */
   margin-top: 20px; /* Top margin for spacing */
 }
 
