@@ -4,27 +4,26 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="GeoWorld">
-  <meta property="og:title" content="GeoWorld: Geometric World Models"/>
-  <meta property="og:description" content="GeoWorld: Geometric World Models"/>
-  <meta property="og:url" content="https://steve-zeyu-zhang.github.io/GeoWorld"/>
+  <meta name="description" content="QVGGT">
+  <meta property="og:title" content="QVGGT: Post-Training Quantized Visual Geometry Grounded Transformer"/>
+  <meta property="og:description" content="QVGGT: Post-Training Quantized Visual Geometry Grounded Transformer"/>
+  <meta property="og:url" content="https://DDsacu.github.io/QVGGT"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/main.png" />
   <meta property="og:image:width" content="3840"/>
   <meta property="og:image:height" content="1920"/>
 
-
-  <meta name="twitter:title" content="GeoWorld">
-  <meta name="twitter:description" content="GeoWorld: Geometric World Models">
+  <meta name="twitter:title" content="QVGGT">
+  <meta name="twitter:description" content="QVGGT: Post-Training Quantized Visual Geometry Grounded Transformer">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/main.png">
-  <meta name="twitter:card" content="GeoWorld: Geometric World Models">
+  <meta name="twitter:card" content="QVGGT: Post-Training Quantized Visual Geometry Grounded Transformer">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="Human Motion Generation">
+  <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>GeoWorld</title>
+  <title>QVGGT</title>
   <link rel="icon" type="image/x-icon" href="static/images/run.svg">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -98,27 +97,17 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><span class="viridis">GeoWorld</span>: Geometric World Models</h1>
+            <h1 class="title is-1 publication-title"><span class="viridis">QVGGT</span>: Post-Training Quantized Visual Geometry Grounded Transformer</h1>
             <h3 class="title is-3 publication-title"><a href="https://cvpr.thecvf.com/Conferences/2026" target="_blank" style="color: OrangeRed;">CVPR 2026</a></h3>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-              <a href="https://steve-zeyu-zhang.github.io/" target="_blank">Zeyu Zhang</a><sup>1</sup>&nbsp;</span>
+              <a href="https://DDsacu.github.io/" target="_blank">Zhizhen Pan</a><sup>1</sup>&nbsp;</span>
               <span class="author-block">
-              <a href="https://www.linkedin.com/in/danning-li-448039229/" target="_blank">Danning Li</a><sup>2</sup>&nbsp;</span>
+              <a href="https://viridisgreen.github.io/" target="_blank">Hesong Wang</a><sup>2</sup>&nbsp;</span>
               <span class="author-block">
-              <a href="https://mbzuai.ac.ae/study/faculty/ian-reid/" target="_blank">Ian Reid</a><sup>2</sup>&nbsp;</span>
+              <a href="https://huanwang.tech/" target="_blank">Huan Wang</a><sup>2</sup>&nbsp;</span>
               <span class="author-block">
-              <a href="https://users.cecs.anu.edu.au/~hartley/" target="_blank">Richard Hartley</a><sup>1</sup></span>
-                  </div>
-                  <p style="height: 10px;">&nbsp;</p> 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block"><font size="4"><sup>1</sup><a href="https://www.anu.edu.au/" target="_blank">The Australian National University</a></font></span><br>
-                    <span class="author-block"><font size="4"><sup>2</sup><a href="https://mbzuai.ac.ae/" target="_blank">Mohamed bin Zayed University of Artificial Intelligence</a></font></span><br>
-                    <!-- <span class="eql-cntrb"><small><sup>*</sup>Equal Contribution.</small></span> -->
-                    <!-- <span class="eql-cntrb"><small><sup>✉</sup>Corresponding author.</small></span><br> -->
-                    <!-- <span class="eql-cntrb"><small><sup>†</sup>Work done while being a visiting student researcher at Peking University.</small></span> -->
-                  </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
@@ -146,7 +135,7 @@
 
               <!-- ArXiv Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2602.23058" target="_blank"
+                  <a href="https://arxiv.org/abs/" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -233,7 +222,10 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-            Energy-based predictive world models provide a powerful approach for multi-step visual planning by reasoning over latent energy landscapes rather than generating pixels. However, existing approaches face two major challenges: <em>(i)</em> their latent representations are typically learned in Euclidean space, neglecting the underlying geometric and hierarchical structure among states, and <em>(ii)</em> they struggle with long-horizon prediction, which leads to rapid degradation across extended rollouts. To address these challenges, we introduce <strong>GeoWorld</strong>, a geometric world model that preserves geometric structure and hierarchical relations through a <em>Hyperbolic JEPA</em>, which maps latent representations from Euclidean space onto hyperbolic manifolds. We further introduce <em>Geometric Reinforcement Learning</em> for energy-based optimization, enabling stable multi-step planning in hyperbolic latent space. Extensive experiments on CrossTask and COIN demonstrate around <strong>3%</strong> SR improvement in 3-step planning and <strong>2%</strong> SR improvement in 4-step planning compared to the state-of-the-art V-JEPA 2.
+            <p>Estimating 3D attributes directly from images has advanced rapidly with the Visual Geometry Grounded Transformer (VGGT), which predicts camera parameters, depth maps, and point clouds in a single forward pass. However, its 1.2B-parameter scale severely limits deployment on resource-constrained platforms such as UAVs and mobile AR devices. To address this limitation, we introduce <strong>QVGGT</strong>, a tailored quantization framework designed to compress VGGT.</p>
+            <p>Our approach starts from the observation that transformer blocks within VGGT exhibit heterogeneous sensitivity to quantization. We thus analyze per-block quantization sensitivity and propose a selective mixed-precision strategy that allocates higher precision to the most fragile transformer blocks. To address the amplification of quantization error caused by high-variance camera and register tokens, we further introduce token filtering with camera information compensation, which removes these outliers from activation calibration and restores their geometric cues using a PCA-derived global compensation token. Finally, we develop a task-aware scale search mechanism that evaluates candidate quantization scales not only through layer reconstruction but also through multi-head supervision and cross-head geometric consistency among camera poses, depth maps, and point maps.</p>
+            <p>Extensive experiments on multiple geometry perception benchmarks demonstrate that QVGGT achieves near-lossless W4A16 quantization, preserving the accuracy of all 3D prediction heads while delivering 3$\sim$4.9$\times$ memory reduction and up to 2.8$\times$ real hardware speedup over FP32.</p>
+            <p>Our approach makes high-fidelity 3D perception feasible on edge devices, enabling practical deployment of feed-forward 3D reconstruction models in real-world constrained environments.</p>
         </div>
       </div>
     </div>

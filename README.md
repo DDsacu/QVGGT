@@ -1,2 +1,2 @@
-# GeoWorld
-[CVPR 2026] GeoWorld: Geometric World Models
+# QVGGT: Post-Training Quantized Visual Geometry Grounded Transformer
+[CVPR 2026]
