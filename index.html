@@ -89,7 +89,7 @@
               <span class="eql-cntrb"><small><sup>*</sup>Corresponding author.</small></span>
             </div>
 
-            <h4 class="title is-3 publication-title"><a href="https://cvpr.thecvf.com/Conferences/2026" target="_blank" style="color: rgb(54, 125, 189);">CVPR 2026</a></h4>
+            <div class="publication-venue"><a href="https://cvpr.thecvf.com/Conferences/2026" target="_blank" class="venue-link">CVPR 2026</a></div>
             
 
             <div class="column has-text-centered">
@@ -150,6 +150,21 @@
 <!-- End teaser video -->
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Visualization Results</h2>
+    <div class="image-container">
+      <center>
+        <img src="static/images/planning.svg" style="width: 50%;">
+        <div class="image-description">
+          <p style="height: 10px;">&nbsp;</p><br>
+          <p><b>Visualization results by QVGGT.</b> 请在此处放置定性可视化结果或对比帧说明。</p><br>
+        </div>
+      </center>
+    </div>
+  </div>
+</section>
+
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -175,6 +190,28 @@
     <!-- End Youtube -->
   </div>
 </section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Comparison with SOTA</h2>
+    <div class="content has-text-centered">在此处放置定量结果（表格或折线图）。</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Qualitative Comparison</h2>
+    <div class="image-container">
+      <center>
+        <img src="static/images/qualitative.svg" style="width: 60%;">
+        <div class="image-description">
+          <p style="height: 10px;">&nbsp;</p><br>
+          <p>在此处放置定性对比图及图注说明。</p><br>
+        </div>
+      </center>
+    </div>
+  </div>
+</section>
+
 <!-- End paper abstract -->
 
 <!-- News (LVOmniBench-like layout) -->
@@ -190,32 +227,13 @@
 </section>
 
 
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Energy-Based Planning</h2>
-</div>
 
-<p style="height: 50px;">&nbsp;</p>
-
-  <div class="image-container">
-    <center>
-    <img src="static/images/planning.svg" style="width: 50%;">
-    <div class="image-description">
-      <p style="height: 10px;">&nbsp;</p><br>
-      <p><b>Energy-based planning by GeoWorld.</b> The diagram shows a <em>Replace Memory Chip</em> task from the COIN dataset, where GeoWorld plans actions by following geodesics over a hyperbolic energy landscape rather than generating pixels.</p><br>
-    </div>
-    </center>
-  </div>
-
-</div>
-</section>
 
 
 <section class="section hero is-light">
   <div class="my-hero-body">
     <div class="container">
-  <h2 class="title is-3">Architecture</h2>
+  <h2 class="title is-3">Method</h2>
 </div>
 
 <p style="height: 50px;">&nbsp;</p>
@@ -225,7 +243,7 @@
     <img src="static/images/architecture.svg" style="width: 50%;">
     <div class="image-description">
       <p style="height: 10px;">&nbsp;</p><br>
-      <p><b>Overview of GeoWorld.</b> Our geometric world model integrates Hyperbolic JEPA for geometry-preserving latent dynamics and Geometric Reinforcement Learning for geodesic-consistent multi-step refinement. Together with energy-based planning using CEM, GeoWorld enables stable and geometry-aware long-horizon visual planning.</p><br>
+      <p><b>Method: QVGGT.</b> 在此处简述方法要点：选择性混合精度、相机/寄存器 token 过滤与补偿、任务感知比例搜索等。</p><br>
     </div>
     </center>
   </div>
