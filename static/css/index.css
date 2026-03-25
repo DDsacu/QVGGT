@@ -175,6 +175,10 @@ video {
   margin-top: 10px; /* Space between the video and caption */
   font-size: 16px; /* Font size for the caption */
   color: #333; /* Caption text color */
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .viridis {
@@ -190,3 +194,7 @@ video {
   background-position: right center; /* Shifts the gradient on hover */
   transform: scale(1.1); /* Slight zoom effect */
 }
+
+/* Alternating section backgrounds */
+.section.alt-light { background-color: #f7f9fc; }
+.section.alt-dark  { background-color: #eef2f7; }
