@@ -49,6 +49,8 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
   <!-- MathJax 用于在网页中渲染 LaTeX 数学公式 -->
   <script>
     window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
@@ -133,34 +135,43 @@
 </section>
 
 
-<!-- Teaser video-->
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <source src="static/videos/main.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Eric Prydz - Call on Me (French House)
-      </h2>
-    </div>
-  </div>
-</section> -->
-<!-- End teaser video -->
-
 
 <section class="section alt-light">
   <div class="container is-max-desktop has-text-centered">
-    <h2 class="title is-3">Visualization Results</h2>
-    <div class="image-container">
-      <center>
-        <img src="static/images/planning.svg" style="width: 50%;">
-        <div class="image-description">
-          <p style="height: 10px;">&nbsp;</p><br>
-          <p><b>Visualization results by QVGGT.</b> 请在此处放置定性可视化结果或对比帧说明。</p><br>
-        </div>
-      </center>
+    <h2 class="title is-4" style="font-weight: 700;">Visualization Results</h2>
+    <div class="content has-text-justified" style="max-width: 900px; margin: 0 auto;">
+      <p>
+        Add a short description of the qualitative visualization here.
+      </p>
+    </div>
+
+    <div class="input-grid">
+      <button type="button" class="input-card is-active" data-pred="static/models/input_1_pred.glb" data-raw="static/models/input_1_raw.glb">
+        <img class="input-thumb" src="static/images/input_1.jpg" alt="Input 1" />
+        <div class="input-title">Input 1</div>
+      </button>
+      <button type="button" class="input-card" data-pred="static/models/input_2_pred.glb" data-raw="static/models/input_2_raw.glb">
+        <img class="input-thumb" src="static/images/input_2.jpg" alt="Input 2" />
+        <div class="input-title">Input 2</div>
+      </button>
+      <button type="button" class="input-card" data-pred="static/models/input_3_pred.glb" data-raw="static/models/input_3_raw.glb">
+        <img class="input-thumb" src="static/images/input_3.jpg" alt="Input 3" />
+        <div class="input-title">Input 3</div>
+      </button>
+    </div>
+
+    <div class="model-container" id="model-compare-wrapper">
+      <div class="model-wrapper-comparison">
+        <div class="model-label">QVGGT</div>
+        <model-viewer id="modelViewerComparison1" loading="eager" touch-action="pan-y" environment-image="legacy" src="static/models/input_1_pred.glb" zoom-sensitivity="0.2" camera-controls disable-tap min-camera-orbit="auto auto 20m" max-camera-orbit="auto auto 30m" interaction-prompt="none" shadow-intensity="0" ar orientation="-20deg 180deg 0deg" style="width: 100%; height: 100%; background: #ffffff;">
+        </model-viewer>
+      </div>
+
+      <div class="model-wrapper-comparison">
+        <div class="model-label">VGGT</div>
+        <model-viewer id="modelViewerComparison2" loading="eager" touch-action="pan-y" environment-image="legacy" src="static/models/input_1_raw.glb" zoom-sensitivity="0.2" camera-controls disable-tap min-camera-orbit="auto auto 20m" max-camera-orbit="auto auto 30m" interaction-prompt="none" shadow-intensity="0" ar orientation="10deg 180deg 0deg" style="width: 100%; height: 100%; background: #ffffff;">
+        </model-viewer>
+      </div>
     </div>
   </div>
 </section>
@@ -211,10 +222,10 @@
 
   <div class="image-container">
     <center>
-    <img src="static/images/architecture.svg" style="width: 50%;">
+    <img src="static/images/method_overview.png" style="width: 60%;" alt="Method overview">
     <div class="image-description">
       <p style="height: 10px;">&nbsp;</p><br>
-      <p><b>Method: QVGGT.</b> 在此处简述方法要点：选择性混合精度、相机/寄存器 token 过滤与补偿、任务感知比例搜索等。</p><br>
+      <p><b>Method overview.</b> Add a concise method description here.</p><br>
     </div>
     </center>
   </div>
@@ -225,7 +236,7 @@
 <section class="section alt-light">
   <div class="container is-max-desktop has-text-centered">
     <h2 class="title is-3">Experiments &amp; Comparison</h2>
-    <div class="content has-text-centered">在此处放置定量结果（表格或折线图）。</div>
+    <div class="content has-text-centered">Add tables/plots for experiments and comparisons here.</div>
   </div>
 </section>
 
@@ -234,10 +245,10 @@
     <h2 class="title is-3">Qualitative Comparison</h2>
     <div class="image-container">
       <center>
-        <img src="static/images/qualitative.svg" style="width: 60%;">
+        <img src="static/images/qualitative_comparison.png" style="width: 70%;" alt="Qualitative comparison">
         <div class="image-description">
           <p style="height: 10px;">&nbsp;</p><br>
-          <p>在此处放置定性对比图及图注说明。</p><br>
+          <p>Add qualitative comparison figures and captions here.</p><br>
         </div>
       </center>
     </div>
@@ -260,56 +271,20 @@
 
 
 
-<!-- Paper poster -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/poster.pdf" width="100%" height="1000">
-          </iframe>
-        
-      </div>
-    </div>
-  </section> -->
-<!--End paper poster -->
-
-
-
-
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code></code></pre>
+      <pre><code>@article{qvggt,
+  title={QVGGT: Post-Training Quantized Visual Geometry Grounded Transformer},
+  author={First Author and Second Author and Third Author},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  year={2026}
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
 
-<!-- 
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer> -->
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
 
   </body>
   </html>

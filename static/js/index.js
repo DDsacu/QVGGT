@@ -1,21 +1,22 @@
-window.HELP_IMPROVE_VIDEOJS = false;
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = Array.from(document.querySelectorAll('.input-card'));
+  const viewerPred = document.getElementById('modelViewerComparison1');
+  const viewerRaw = document.getElementById('modelViewerComparison2');
 
+  const selectCard = (card) => {
+    cards.forEach((c) => c.classList.remove('is-active'));
+    card.classList.add('is-active');
 
-$(document).ready(function() {
-    // Check for click events on the navbar burger icon
+    const pred = card.getAttribute('data-pred');
+    const raw = card.getAttribute('data-raw');
 
-    var options = {
-			slidesToScroll: 1,
-			slidesToShow: 1,
-			loop: true,
-			infinite: true,
-			autoplay: true,
-			autoplaySpeed: 20000,
-    }
+    if (viewerPred && pred) viewerPred.setAttribute('src', pred);
+    if (viewerRaw && raw) viewerRaw.setAttribute('src', raw);
+  };
 
-		// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
-	
-    bulmaSlider.attach();
+  cards.forEach((card) => {
+    card.addEventListener('click', () => selectCard(card));
+  });
 
-})
+  if (cards[0]) selectCard(cards[0]);
+});
