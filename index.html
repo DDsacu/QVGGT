@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css"> <!-- 通用图标库 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"> <!-- 学术图标库 -->
-  <link rel="stylesheet" href="static/css/index.css"> <!-- 自定义样式 -->
+  <link rel="stylesheet" href="static/css/index.css?v=20260529"> <!-- 自定义样式 -->
 
   <!-- ======================================================= -->
   <!-- 3. 脚本 (JS) 引入                                        -->
@@ -48,7 +48,7 @@
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <script src="static/js/index.js?v=20260529"></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
   <!-- MathJax 用于在网页中渲染 LaTeX 数学公式 -->
@@ -248,31 +248,21 @@
   </div>
 </section>
 <section class="section alt-white">
-  <div class="my-hero-body">
-    <div class="container has-text-centered">
-  <h2 class="title is-3">Method</h2>
-</div>
-
-<p style="height: 50px;">&nbsp;</p>
-
-  <div class="image-container">
-    <center>
-    <img src="static/images/method_overview.svg" style="width: 80%;" alt="Method overview">
-    <div class="image-description">
-      <p style="height: 10px;">&nbsp;</p><br>
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Method</h2>
+    <div class="method-figure">
+      <img src="static/images/method_overview.svg" alt="Method overview">
+    </div>
+    <div class="content has-text-justified method-description">
       <p><b>Overview of QVGGT.</b> Our framework consists of three components to preserve VGGT performance under low-bit quantization.
         Step 1: Sensitivity analysis. We estimate per-block quantization sensitivity across frame-wise and global transformer blocks, enabling
         selective mixed-precision assignment for critical layers. Step 2: Token ﬁltering with camera information compensation. To mitigate
         outlier-dominated scale estimation, we exclude camera and register tokens during activation statistics collection. A camera information
         compensation (CIC) token is then constructed via top-K PCA over camera-token activations and injected into the camera head. Step
         3: Task-aware scale search. We select quantization scales using a task-aware objective that combines multi-head losses, geometric
-        consistency, and reconstruction error, jointly optimizing accuracy and robustness across all heads.
-        </p><br>
+        consistency, and reconstruction error, jointly optimizing accuracy and robustness across all heads.</p>
     </div>
-    </center>
   </div>
-
-</div>
 </section>
 
 <section class="section alt-blue">

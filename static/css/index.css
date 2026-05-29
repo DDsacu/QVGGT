@@ -454,6 +454,22 @@ video {
   display: none;
 }
 
+.method-figure {
+  margin: 28px auto 18px;
+}
+
+.method-figure img {
+  width: 100%;
+  max-width: 980px;
+  display: block;
+  margin: 0 auto;
+}
+
+.method-description {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
 .experiment-carousel {
   position: relative;
   margin: 24px auto 0;
