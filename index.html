@@ -289,7 +289,7 @@
             <h3>Near-lossless pose accuracy under W4A16.</h3>
             <p>QVGGT preserves VGGT camera pose performance on CO3Dv2 and RealEstate10K while reducing latency.</p>
           </div>
-          <img src="static/images/exp_camera_pose.svg" alt="Camera pose estimation results on CO3Dv2 and RealEstate10K" />
+          <img src="static/images/exp1.png" alt="Camera pose estimation results on CO3Dv2 and RealEstate10K" />
         </article>
         <article class="experiment-card">
           <div class="experiment-copy">
@@ -297,7 +297,7 @@
             <h3>Reconstruction quality remains close to FP16.</h3>
             <p>On 7-Scenes and NRGBD, QVGGT keeps accuracy, completeness, and normal consistency stable after quantization.</p>
           </div>
-          <img src="static/images/exp_reconstruction.svg" alt="3D reconstruction results on 7-Scenes and NRGBD" />
+          <img src="static/images/exp2.png" alt="3D reconstruction results on 7-Scenes and NRGBD" />
         </article>
         <article class="experiment-card">
           <div class="experiment-copy">
@@ -305,7 +305,7 @@
             <h3>Each geometry-aware component contributes.</h3>
             <p>Selective mixed precision, CIC, and task-aware scale search progressively recover camera and reconstruction accuracy.</p>
           </div>
-          <img src="static/images/exp_ablation.svg" alt="Ablation study results for QVGGT components" />
+          <img src="static/images/exp3.png" alt="Ablation study results for QVGGT components" />
         </article>
         <article class="experiment-card">
           <div class="experiment-copy">
@@ -313,7 +313,7 @@
             <h3>Lower memory and faster inference.</h3>
             <p>QVGGT reduces memory pressure and improves latency, making VGGT-style 3D perception more deployable.</p>
           </div>
-          <img src="static/images/exp_efficiency.svg" alt="Efficiency results showing memory reduction and latency speedup" />
+          <img src="static/images/memory_comparison_largeFont.png" alt="Efficiency results showing memory reduction and latency speedup" />
         </article>
       </div>
       <button type="button" class="experiment-nav experiment-next" data-experiment-next onclick="qvggtScrollExperiment(1)" aria-label="Next experiment">
