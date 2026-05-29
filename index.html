@@ -27,7 +27,7 @@
   <!-- 浏览器标签页名称 -->
   <title>QVGGT</title>
   <!-- 浏览器标签页的小图标 (Favicon) -->
-  <link rel="icon" type="image/x-icon" href="static/images/run.svg">
+  <link rel="icon" type="image/x-icon" href="static/images/logo.png">
   
   <!-- ======================================================= -->
   <!-- 2. 样式表 (CSS) 引入                                     -->
@@ -63,13 +63,13 @@
   <!-- ======================================================= -->
   <!-- 5. 网页头部信息区 (Hero Section)：标题、作者、机构与资源链接 -->
   <!-- ======================================================= -->
-  <section class="hero">
+  <section class="hero alt-white">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-              <img src="static/images/your_logo.png" alt="Logo" style="width: 1em; vertical-align: middle; margin-right: 10px;" />
+              <img src="static/images/logo.png" alt="Logo" style="width: 3em; vertical-align: middle; margin-right: 10px;" />
               <span>QVGGT</span>: Post-Training Quantized Visual Geometry Grounded Transformer
             </h1>
             <div class="is-size-5 publication-authors">
@@ -77,21 +77,19 @@
               <span class="author-block">
               <a href="https://DDsacu.github.io/" target="_blank">Zhizhen Pan</a><sup>1, 2</sup>&nbsp;</span>
               <span class="author-block">
-              <a href="https://viridisgreen.github.io/" target="_blank">Hesong Wang</a><sup>2</sup>&nbsp;</span>
+              <a href="https://viridisgreen.github.io/" target="_blank">Hesong Wang</a><sup>1</sup>&nbsp;</span>
               <span class="author-block">
-              <a href="https://huanwang.tech/" target="_blank">Huan Wang</a><sup>2, *</sup>&nbsp;</span>
+              <a href="https://huanwang.tech/" target="_blank">Huan Wang</a><sup>1, *</sup>&nbsp;</span>
             </div>
 
             <!-- Institutions -->
-            <p style="height: 10px;">&nbsp;</p> 
-            <div class="is-size-5 publication-authors">
-              <span class="author-block"><font size="4"><sup>1</sup><a href="#" target="_blank">Beijing University of Posts and Telecommunications</a></font></span>
-              <span class="author-block"><font size="4"><sup>2</sup><a href="#" target="_blank">Westlake University</a></font></span><br>
-              <br>
+            <div class="is-size-5 publication-authors publication-affiliations">
+              <span class="author-block"><font size="4"><sup>1</sup><a href="#" target="_blank">Westlake University</a></font></span>
+              <span class="author-block"><font size="4"><sup>2</sup><a href="#" target="_blank">Beijing University of Posts and Telecommunications</a></font></span>
+            </div>
+            <div class="publication-corresponding">
               <span class="eql-cntrb"><small><sup>*</sup>Corresponding author.</small></span>
             </div>
-
-            <h4 class="title is-3 publication-title"><a href="https://cvpr.thecvf.com/Conferences/2026" target="_blank" style="color: rgb(54, 125, 189);">CVPR 2026</a></h4>
             
 
             <div class="column has-text-centered">
@@ -136,7 +134,7 @@
 
 
 
-<section class="section alt-light">
+<section class="section alt-blue">
   <div class="container is-max-desktop has-text-centered">
     <h2 class="title is-4" style="font-weight: 700;">Visualization Results</h2>
     <div class="content has-text-justified" style="max-width: 900px; margin: 0 auto;">
@@ -147,17 +145,54 @@
 
     <div class="input-grid">
       <button type="button" class="input-card is-active" data-pred="static/models/input_1_pred.glb" data-raw="static/models/input_1_raw.glb">
-        <img class="input-thumb" src="static/images/input_1.jpg" alt="Input 1" />
-        <div class="input-title">Input 1</div>
+        <img class="input-thumb js-gallery-trigger" src="static/images/input1.jpg" alt="Single-view input" data-gallery="static/images/input1.jpg" />
+        <div class="input-meta">Single view</div>
       </button>
       <button type="button" class="input-card" data-pred="static/models/input_2_pred.glb" data-raw="static/models/input_2_raw.glb">
-        <img class="input-thumb" src="static/images/input_2.jpg" alt="Input 2" />
-        <div class="input-title">Input 2</div>
+        <div class="input-collage collage-featured js-gallery-trigger" aria-label="9-view input image set" data-gallery="static/images/Input2/1.jpg,static/images/Input2/2.jpg,static/images/Input2/3.jpg,static/images/Input2/4.jpg,static/images/Input2/5.jpg,static/images/Input2/6.jpg,static/images/Input2/7.jpg,static/images/Input2/8.jpg,static/images/Input2/9.jpg">
+          <div class="collage-cell collage-main" data-fallback="View 1">
+            <img src="static/images/Input2/1.jpg" alt="9-view input, view 1" onerror="this.style.display='none'" />
+          </div>
+          <div class="collage-cell" data-fallback="View 2">
+            <img src="static/images/Input2/2.jpg" alt="9-view input, view 2" onerror="this.style.display='none'" />
+          </div>
+          <div class="collage-cell" data-fallback="View 3">
+            <img src="static/images/Input2/3.jpg" alt="9-view input, view 3" onerror="this.style.display='none'" />
+          </div>
+          <div class="collage-cell collage-more">+6</div>
+        </div>
+        <div class="input-meta">9 views</div>
       </button>
       <button type="button" class="input-card" data-pred="static/models/input_3_pred.glb" data-raw="static/models/input_3_raw.glb">
-        <img class="input-thumb" src="static/images/input_3.jpg" alt="Input 3" />
-        <div class="input-title">Input 3</div>
+        <div class="input-collage collage-grid js-gallery-trigger" aria-label="22-view input image set" data-gallery="static/images/input_3_1.jpg,static/images/input_3_2.jpg,static/images/input_3_3.jpg">
+          <div class="collage-cell" data-fallback="View 1">
+            <img src="static/images/input_3_1.jpg" alt="22-view input, view 1" onerror="this.style.display='none'" />
+          </div>
+          <div class="collage-cell" data-fallback="View 2">
+            <img src="static/images/input_3_2.jpg" alt="22-view input, view 2" onerror="this.style.display='none'" />
+          </div>
+          <div class="collage-cell" data-fallback="View 3">
+            <img src="static/images/input_3_3.jpg" alt="22-view input, view 3" onerror="this.style.display='none'" />
+          </div>
+          <div class="collage-cell collage-more">+19</div>
+        </div>
+        <div class="input-meta">22 views</div>
       </button>
+    </div>
+
+    <div class="gallery-modal" id="inputGallery" aria-hidden="true">
+      <div class="gallery-backdrop" data-gallery-close></div>
+      <div class="gallery-panel" role="dialog" aria-modal="true" aria-label="Input image preview">
+        <button type="button" class="gallery-close" data-gallery-close aria-label="Close preview">X</button>
+        <button type="button" class="gallery-nav gallery-prev" data-gallery-prev aria-label="Previous image">
+          <span class="fas fa-chevron-left" aria-hidden="true"></span>
+        </button>
+        <img class="gallery-image" id="galleryImage" alt="Input preview" />
+        <button type="button" class="gallery-nav gallery-next" data-gallery-next aria-label="Next image">
+          <span class="fas fa-chevron-right" aria-hidden="true"></span>
+        </button>
+        <div class="gallery-count" id="galleryCount"></div>
+      </div>
     </div>
 
     <div class="model-container" id="model-compare-wrapper">
@@ -176,7 +211,7 @@
   </div>
 </section>
 
-<section class="section news-section alt-dark">
+<section class="section news-section alt-white">
   <div class="container is-max-desktop has-text-centered">
     <h2 class="title is-4"><span class="news-bell">🔔</span> News</h2>
     <div class="box news-box">
@@ -188,7 +223,7 @@
 </section>
 
 <!-- Paper abstract -->
-<section class="section alt-light">
+<section class="section alt-blue">
   <div class="container is-max-desktop has-text-centered">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -212,7 +247,7 @@
     <!-- End Youtube -->
   </div>
 </section>
-<section class="section alt-dark">
+<section class="section alt-white">
   <div class="my-hero-body">
     <div class="container has-text-centered">
   <h2 class="title is-3">Method</h2>
@@ -222,10 +257,17 @@
 
   <div class="image-container">
     <center>
-    <img src="static/images/method_overview.png" style="width: 60%;" alt="Method overview">
+    <img src="static/images/method_overview.svg" style="width: 80%;" alt="Method overview">
     <div class="image-description">
       <p style="height: 10px;">&nbsp;</p><br>
-      <p><b>Method overview.</b> Add a concise method description here.</p><br>
+      <p><b>Overview of QVGGT.</b> Our framework consists of three components to preserve VGGT performance under low-bit quantization.
+        Step 1: Sensitivity analysis. We estimate per-block quantization sensitivity across frame-wise and global transformer blocks, enabling
+        selective mixed-precision assignment for critical layers. Step 2: Token ﬁltering with camera information compensation. To mitigate
+        outlier-dominated scale estimation, we exclude camera and register tokens during activation statistics collection. A camera information
+        compensation (CIC) token is then constructed via top-K PCA over camera-token activations and injected into the camera head. Step
+        3: Task-aware scale search. We select quantization scales using a task-aware objective that combines multi-head losses, geometric
+        consistency, and reconstruction error, jointly optimizing accuracy and robustness across all heads.
+        </p><br>
     </div>
     </center>
   </div>
@@ -233,27 +275,74 @@
 </div>
 </section>
 
-<section class="section alt-light">
+<section class="section alt-blue">
   <div class="container is-max-desktop has-text-centered">
     <h2 class="title is-3">Experiments &amp; Comparison</h2>
-    <div class="content has-text-centered">Add tables/plots for experiments and comparisons here.</div>
-  </div>
-</section>
-
-<section class="section alt-dark">
-  <div class="container is-max-desktop has-text-centered">
-    <h2 class="title is-3">Qualitative Comparison</h2>
-    <div class="image-container">
-      <center>
-        <img src="static/images/qualitative_comparison.png" style="width: 70%;" alt="Qualitative comparison">
-        <div class="image-description">
-          <p style="height: 10px;">&nbsp;</p><br>
-          <p>Add qualitative comparison figures and captions here.</p><br>
-        </div>
-      </center>
+    <div class="experiment-carousel" aria-label="Experiment result cards">
+      <button type="button" class="experiment-nav experiment-prev" data-experiment-prev onclick="qvggtScrollExperiment(-1)" aria-label="Previous experiment">
+        <span class="fas fa-chevron-left" aria-hidden="true"></span>
+      </button>
+      <div class="experiment-track" id="experimentTrack">
+        <article class="experiment-card">
+          <div class="experiment-copy">
+            <p class="experiment-kicker">Camera Pose Estimation</p>
+            <h3>Near-lossless pose accuracy under W4A16.</h3>
+            <p>QVGGT preserves VGGT camera pose performance on CO3Dv2 and RealEstate10K while reducing latency.</p>
+          </div>
+          <img src="static/images/exp_camera_pose.svg" alt="Camera pose estimation results on CO3Dv2 and RealEstate10K" />
+        </article>
+        <article class="experiment-card">
+          <div class="experiment-copy">
+            <p class="experiment-kicker">3D Reconstruction</p>
+            <h3>Reconstruction quality remains close to FP16.</h3>
+            <p>On 7-Scenes and NRGBD, QVGGT keeps accuracy, completeness, and normal consistency stable after quantization.</p>
+          </div>
+          <img src="static/images/exp_reconstruction.svg" alt="3D reconstruction results on 7-Scenes and NRGBD" />
+        </article>
+        <article class="experiment-card">
+          <div class="experiment-copy">
+            <p class="experiment-kicker">Ablation Study</p>
+            <h3>Each geometry-aware component contributes.</h3>
+            <p>Selective mixed precision, CIC, and task-aware scale search progressively recover camera and reconstruction accuracy.</p>
+          </div>
+          <img src="static/images/exp_ablation.svg" alt="Ablation study results for QVGGT components" />
+        </article>
+        <article class="experiment-card">
+          <div class="experiment-copy">
+            <p class="experiment-kicker">Efficiency Analysis</p>
+            <h3>Lower memory and faster inference.</h3>
+            <p>QVGGT reduces memory pressure and improves latency, making VGGT-style 3D perception more deployable.</p>
+          </div>
+          <img src="static/images/exp_efficiency.svg" alt="Efficiency results showing memory reduction and latency speedup" />
+        </article>
+      </div>
+      <button type="button" class="experiment-nav experiment-next" data-experiment-next onclick="qvggtScrollExperiment(1)" aria-label="Next experiment">
+        <span class="fas fa-chevron-right" aria-hidden="true"></span>
+      </button>
     </div>
   </div>
 </section>
+
+<script>
+  window.qvggtExperimentIndex = 0;
+  window.qvggtScrollExperiment = function(direction) {
+    var track = document.getElementById('experimentTrack');
+    if (!track) return;
+
+    var cards = track.querySelectorAll('.experiment-card');
+    if (!cards.length) return;
+
+    window.qvggtExperimentIndex = (window.qvggtExperimentIndex + direction + cards.length) % cards.length;
+    var card = cards[window.qvggtExperimentIndex];
+    var left = card.offsetLeft - track.offsetLeft - ((track.clientWidth - card.clientWidth) / 2);
+
+    if (typeof track.scrollTo === 'function') {
+      track.scrollTo({ left: left, behavior: 'smooth' });
+    } else {
+      track.scrollLeft = left;
+    }
+  };
+</script>
 
 <!-- End paper abstract -->
 
@@ -272,7 +361,7 @@
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <section class="section alt-white" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code></code></pre>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520">
+  <rect width="920" height="520" rx="18" fill="#f8fafc"/>
+  <text x="44" y="56" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1f2937">Camera Pose Estimation</text>
+  <text x="44" y="88" font-family="Arial, sans-serif" font-size="15" fill="#667085">AUC@30 with 10 random frames. Higher is better.</text>
+  <g transform="translate(44 126)">
+    <rect width="832" height="52" rx="10" fill="#dbeafe"/>
+    <text x="20" y="33" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a5f">Method</text>
+    <text x="230" y="33" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a5f">W/A</text>
+    <text x="360" y="33" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a5f">CO3Dv2</text>
+    <text x="510" y="33" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a5f">Re10K</text>
+    <text x="650" y="33" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a5f">Latency</text>
+    <g font-family="Arial, sans-serif" font-size="15" fill="#334155">
+      <text x="20" y="95">VGGT baseline</text><text x="230" y="95">FP16</text><text x="360" y="95">89.5</text><text x="510" y="95">85.3</text><text x="650" y="95">0.38s</text>
+      <text x="20" y="149">SmoothQuant</text><text x="230" y="149">W8A8</text><text x="360" y="149">87.9</text><text x="510" y="149">81.3</text><text x="650" y="149">0.62s</text>
+      <text x="20" y="203">GPTQ</text><text x="230" y="203">W4A16</text><text x="360" y="203">76.9</text><text x="510" y="203">75.6</text><text x="650" y="203">0.28s</text>
+      <text x="20" y="257">AWQ</text><text x="230" y="257">W4A16</text><text x="360" y="257">54.6</text><text x="510" y="257">59.2</text><text x="650" y="257">0.28s</text>
+    </g>
+    <rect x="0" y="286" width="832" height="58" rx="10" fill="#e8f6ef" stroke="#75c08f"/>
+    <text x="20" y="322" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#14532d">QVGGT (ours)</text>
+    <text x="230" y="322" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#14532d">W4A16</text>
+    <text x="360" y="322" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#14532d">89.4</text>
+    <text x="510" y="322" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#14532d">85.0</text>
+    <text x="650" y="322" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#14532d">0.23s</text>
+  </g>
+  <text x="44" y="486" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#367dbd">Takeaway: QVGGT matches FP16 accuracy while running faster.</text>
+</svg>

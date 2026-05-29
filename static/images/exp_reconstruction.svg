@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520">
+  <rect width="920" height="520" rx="18" fill="#f8fafc"/>
+  <text x="44" y="56" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1f2937">3D Reconstruction</text>
+  <text x="44" y="88" font-family="Arial, sans-serif" font-size="15" fill="#667085">Accuracy (Acc) lower is better. Normal consistency (NC) higher is better.</text>
+  <g transform="translate(44 124)">
+    <rect width="832" height="52" rx="10" fill="#dbeafe"/>
+    <text x="20" y="33" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a5f">Method</text>
+    <text x="210" y="33" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a5f">W/A</text>
+    <text x="320" y="33" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a5f">7-Scenes Acc</text>
+    <text x="480" y="33" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a5f">7-Scenes NC</text>
+    <text x="630" y="33" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a5f">NRGBD Acc</text>
+    <text x="750" y="33" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1e3a5f">NC</text>
+    <g font-family="Arial, sans-serif" font-size="15" fill="#334155">
+      <text x="20" y="93">VGGT baseline</text><text x="210" y="93">FP16</text><text x="320" y="93">0.030</text><text x="480" y="93">0.847</text><text x="630" y="93">0.024</text><text x="750" y="93">0.922</text>
+      <text x="20" y="147">SmoothQuant</text><text x="210" y="147">W8A8</text><text x="320" y="147">0.067</text><text x="480" y="147">0.702</text><text x="630" y="147">0.062</text><text x="750" y="147">0.769</text>
+      <text x="20" y="201">GPTQ</text><text x="210" y="201">W4A16</text><text x="320" y="201">0.051</text><text x="480" y="201">0.802</text><text x="630" y="201">0.053</text><text x="750" y="201">0.872</text>
+      <text x="20" y="255">AWQ</text><text x="210" y="255">W4A16</text><text x="320" y="255">0.043</text><text x="480" y="255">0.819</text><text x="630" y="255">0.047</text><text x="750" y="255">0.891</text>
+    </g>
+    <rect x="0" y="284" width="832" height="58" rx="10" fill="#e8f6ef" stroke="#75c08f"/>
+    <text x="20" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#14532d">QVGGT (ours)</text>
+    <text x="210" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#14532d">W4A16</text>
+    <text x="320" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#14532d">0.031</text>
+    <text x="480" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#14532d">0.849</text>
+    <text x="630" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#14532d">0.029</text>
+    <text x="750" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#14532d">0.925</text>
+  </g>
+  <text x="44" y="486" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#367dbd">Takeaway: 4-bit QVGGT keeps dense 3D quality close to the FP16 model.</text>
+</svg>

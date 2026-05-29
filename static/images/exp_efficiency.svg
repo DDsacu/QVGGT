@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520">
+  <rect width="920" height="520" rx="18" fill="#f8fafc"/>
+  <text x="44" y="56" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1f2937">Efficiency Analysis</text>
+  <text x="44" y="88" font-family="Arial, sans-serif" font-size="15" fill="#667085">Memory and latency gains from W4A16 post-training quantization.</text>
+  <g transform="translate(54 128)">
+    <rect x="0" y="0" width="250" height="150" rx="16" fill="#e8f6ef"/>
+    <text x="26" y="52" font-family="Arial, sans-serif" font-size="38" font-weight="800" fill="#14532d">3-4.9x</text>
+    <text x="26" y="88" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#14532d">Memory reduction</text>
+    <text x="26" y="116" font-family="Arial, sans-serif" font-size="14" fill="#3f6b50">Across input-frame counts</text>
+    <rect x="282" y="0" width="250" height="150" rx="16" fill="#dbeafe"/>
+    <text x="308" y="52" font-family="Arial, sans-serif" font-size="38" font-weight="800" fill="#1e3a5f">2.8x</text>
+    <text x="308" y="88" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#1e3a5f">Hardware speedup</text>
+    <text x="308" y="116" font-family="Arial, sans-serif" font-size="14" fill="#475569">Up to real-device speedup</text>
+    <rect x="564" y="0" width="250" height="150" rx="16" fill="#fff7ed"/>
+    <text x="590" y="52" font-family="Arial, sans-serif" font-size="38" font-weight="800" fill="#9a3412">&gt;75%</text>
+    <text x="590" y="88" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#9a3412">Model size reduction</text>
+    <text x="590" y="116" font-family="Arial, sans-serif" font-size="14" fill="#7c2d12">Compared with FP16 VGGT</text>
+  </g>
+  <g transform="translate(92 342)" font-family="Arial, sans-serif">
+    <text x="0" y="0" font-size="16" font-weight="700" fill="#334155">Normalized efficiency with 2 input frames</text>
+    <rect x="0" y="28" width="736" height="26" rx="13" fill="#e2e8f0"/>
+    <rect x="0" y="28" width="370" height="26" rx="13" fill="#367dbd"/>
+    <text x="386" y="47" font-size="14" fill="#334155">QVGGT: 2.11x memory reduction</text>
+    <rect x="0" y="82" width="736" height="26" rx="13" fill="#e2e8f0"/>
+    <rect x="0" y="82" width="338" height="26" rx="13" fill="#75c08f"/>
+    <text x="354" y="101" font-size="14" fill="#334155">QVGGT: 1.93x latency speedup</text>
+  </g>
+</svg>
