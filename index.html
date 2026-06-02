@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css"> <!-- 通用图标库 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"> <!-- 学术图标库 -->
-  <link rel="stylesheet" href="static/css/index.css?v=20260529"> <!-- 自定义样式 -->
+  <link rel="stylesheet" href="static/css/index.css?v=20260530"> <!-- 自定义样式 -->
 
   <!-- ======================================================= -->
   <!-- 3. 脚本 (JS) 引入                                        -->
@@ -48,7 +48,7 @@
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js?v=20260529"></script>
+  <script src="static/js/index.js?v=20260530"></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
   <!-- MathJax 用于在网页中渲染 LaTeX 数学公式 -->
@@ -96,7 +96,7 @@
               <div class="publication-links">
               <!-- ArXiv Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/YOUR_ARXIV_ID" target="_blank"
+                  <a href="https://arxiv.org/abs/2605.31124" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -144,11 +144,11 @@
     </div>
 
     <div class="input-grid">
-      <button type="button" class="input-card is-active" data-pred="static/models/input_1_pred.glb" data-raw="static/models/input_1_raw.glb">
+      <button type="button" class="input-card is-active" data-pred="static/models/QVGGT_1.glb" data-raw="static/models/VGGT_1.glb">
         <img class="input-thumb js-gallery-trigger" src="static/images/input1.jpg" alt="Single-view input" data-gallery="static/images/input1.jpg" />
         <div class="input-meta">Single view</div>
       </button>
-      <button type="button" class="input-card" data-pred="static/models/input_2_pred.glb" data-raw="static/models/input_2_raw.glb">
+      <button type="button" class="input-card" data-pred="static/models/QVGGT_9.glb" data-raw="static/models/VGGT_9.glb">
         <div class="input-collage collage-featured js-gallery-trigger" aria-label="9-view input image set" data-gallery="static/images/Input2/1.jpg,static/images/Input2/2.jpg,static/images/Input2/3.jpg,static/images/Input2/4.jpg,static/images/Input2/5.jpg,static/images/Input2/6.jpg,static/images/Input2/7.jpg,static/images/Input2/8.jpg,static/images/Input2/9.jpg">
           <div class="collage-cell collage-main" data-fallback="View 1">
             <img src="static/images/Input2/1.jpg" alt="9-view input, view 1" onerror="this.style.display='none'" />
@@ -163,7 +163,7 @@
         </div>
         <div class="input-meta">9 views</div>
       </button>
-      <button type="button" class="input-card" data-pred="static/models/input_3_pred.glb" data-raw="static/models/input_3_raw.glb">
+      <button type="button" class="input-card" data-pred="static/models/QVGGT_22.glb" data-raw="static/models/VGGT_22.glb">
         <div class="input-collage collage-grid js-gallery-trigger" aria-label="22-view input image set" data-gallery="static/images/input_3_1.jpg,static/images/input_3_2.jpg,static/images/input_3_3.jpg">
           <div class="collage-cell" data-fallback="View 1">
             <img src="static/images/input_3_1.jpg" alt="22-view input, view 1" onerror="this.style.display='none'" />
@@ -198,14 +198,16 @@
     <div class="model-container" id="model-compare-wrapper">
       <div class="model-wrapper-comparison">
         <div class="model-label">QVGGT</div>
-        <model-viewer id="modelViewerComparison1" loading="eager" touch-action="pan-y" environment-image="legacy" src="static/models/input_1_pred.glb" zoom-sensitivity="0.2" camera-controls disable-tap min-camera-orbit="auto auto 20m" max-camera-orbit="auto auto 30m" interaction-prompt="none" shadow-intensity="0" ar orientation="-20deg 180deg 0deg" style="width: 100%; height: 100%; background: #ffffff;">
+        <model-viewer id="modelViewerComparison1" class="glb-viewer" loading="eager" reveal="auto" touch-action="pan-y" environment-image="legacy" src="static/models/QVGGT_1.glb" camera-orbit="0deg 75deg 105%" camera-target="auto auto auto" field-of-view="30deg" zoom-sensitivity="0.2" camera-controls disable-tap interaction-prompt="none" shadow-intensity="0" exposure="1" ar>
         </model-viewer>
+        <div class="viewer-status" data-viewer-status>Loading GLB...</div>
       </div>
 
       <div class="model-wrapper-comparison">
         <div class="model-label">VGGT</div>
-        <model-viewer id="modelViewerComparison2" loading="eager" touch-action="pan-y" environment-image="legacy" src="static/models/input_1_raw.glb" zoom-sensitivity="0.2" camera-controls disable-tap min-camera-orbit="auto auto 20m" max-camera-orbit="auto auto 30m" interaction-prompt="none" shadow-intensity="0" ar orientation="10deg 180deg 0deg" style="width: 100%; height: 100%; background: #ffffff;">
+        <model-viewer id="modelViewerComparison2" class="glb-viewer" loading="eager" reveal="auto" touch-action="pan-y" environment-image="legacy" src="static/models/VGGT_1.glb" camera-orbit="0deg 75deg 105%" camera-target="auto auto auto" field-of-view="30deg" zoom-sensitivity="0.2" camera-controls disable-tap interaction-prompt="none" shadow-intensity="0" exposure="1" ar>
         </model-viewer>
+        <div class="viewer-status" data-viewer-status>Loading GLB...</div>
       </div>
     </div>
   </div>
@@ -323,38 +325,32 @@
     if (!cards.length) return;
 
     window.qvggtExperimentIndex = (window.qvggtExperimentIndex + direction + cards.length) % cards.length;
-    var card = cards[window.qvggtExperimentIndex];
-    var left = card.offsetLeft - track.offsetLeft - ((track.clientWidth - card.clientWidth) / 2);
-
-    if (typeof track.scrollTo === 'function') {
-      track.scrollTo({ left: left, behavior: 'smooth' });
-    } else {
-      track.scrollLeft = left;
-    }
+    var firstCard = cards[0];
+    var gap = 18;
+    var distance = firstCard.getBoundingClientRect().width + gap;
+    track.style.transform = 'translateX(' + (-window.qvggtExperimentIndex * distance) + 'px)';
   };
+
+  window.addEventListener('resize', function() {
+    var current = window.qvggtExperimentIndex || 0;
+    window.qvggtExperimentIndex = 0;
+    window.qvggtScrollExperiment(current);
+  });
 </script>
 
 <!-- End paper abstract -->
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!--BibTex citation -->
   <section class="section alt-white" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code></code></pre>
+      <pre><code>@article{pan2026qvggt,
+        title={QVGGT: Post-Training Quantized Visual Geometry Grounded Transformer},
+        author={Pan, Zhizhen and Wang, Hesong and Wang, Huan},
+        journal={arXiv preprint arXiv: 2605.31124},
+        year={2026}
+      }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->

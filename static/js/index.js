@@ -10,6 +10,41 @@ document.addEventListener('DOMContentLoaded', () => {
   let galleryItems = [];
   let galleryIndex = 0;
 
+  const setViewerStatus = (viewer, message, hidden = false) => {
+    const wrapper = viewer?.closest('.model-wrapper-comparison');
+    const status = wrapper?.querySelector('[data-viewer-status]');
+    if (!status) return;
+
+    status.textContent = message;
+    status.classList.toggle('is-hidden', hidden);
+  };
+
+  const resetViewerCamera = (viewer) => {
+    if (!viewer) return;
+
+    viewer.setAttribute('camera-orbit', '0deg 75deg 105%');
+    viewer.setAttribute('camera-target', 'auto auto auto');
+    viewer.setAttribute('field-of-view', '30deg');
+    viewer.jumpCameraToGoal?.();
+  };
+
+  const wireGlbViewer = (viewer) => {
+    if (!viewer) return;
+
+    viewer.addEventListener('load', () => {
+      resetViewerCamera(viewer);
+      setViewerStatus(viewer, '', true);
+    });
+
+    viewer.addEventListener('error', () => {
+      const src = viewer.getAttribute('src') || 'selected GLB file';
+      setViewerStatus(viewer, `GLB not found or failed to load: ${src}`);
+    });
+  };
+
+  wireGlbViewer(viewerPred);
+  wireGlbViewer(viewerRaw);
+
   document.querySelectorAll('.collage-cell img').forEach((image) => {
     image.addEventListener('error', () => {
       image.style.display = 'none';
@@ -23,8 +58,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const pred = card.getAttribute('data-pred');
     const raw = card.getAttribute('data-raw');
 
-    if (viewerPred && pred) viewerPred.setAttribute('src', pred);
-    if (viewerRaw && raw) viewerRaw.setAttribute('src', raw);
+    if (viewerPred && pred) {
+      setViewerStatus(viewerPred, 'Loading GLB...');
+      viewerPred.setAttribute('src', pred);
+      resetViewerCamera(viewerPred);
+    }
+    if (viewerRaw && raw) {
+      setViewerStatus(viewerRaw, 'Loading GLB...');
+      viewerRaw.setAttribute('src', raw);
+      resetViewerCamera(viewerRaw);
+    }
   };
 
   cards.forEach((card) => {

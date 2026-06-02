@@ -474,6 +474,7 @@ video {
   position: relative;
   margin: 24px auto 0;
   max-width: 980px;
+  overflow: hidden;
 }
 
 .experiment-track {
@@ -481,17 +482,13 @@ video {
   z-index: 1;
   display: flex;
   gap: 18px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  padding: 4px 4px 18px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(54, 125, 189, 0.45) rgba(255, 255, 255, 0.65);
+  padding: 4px 0 18px;
+  transition: transform 0.35s ease;
+  will-change: transform;
 }
 
 .experiment-card {
-  flex: 0 0 86%;
-  scroll-snap-align: center;
+  flex: 0 0 100%;
   display: grid;
   grid-template-columns: minmax(220px, 0.35fr) minmax(0, 0.65fr);
   gap: 18px;
@@ -557,15 +554,18 @@ video {
   color: rgb(54, 125, 189);
   cursor: pointer;
   pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 8px 24px rgba(31, 45, 61, 0.12);
 }
 
 .experiment-prev {
-  left: -12px;
+  left: 8px;
 }
 
 .experiment-next {
-  right: -12px;
+  right: 8px;
 }
 
 .experiment-nav:hover {
@@ -590,6 +590,13 @@ video {
   height: 420px;
 }
 
+.glb-viewer {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #ffffff;
+}
+
 .model-label {
   position: absolute;
   top: 12px;
@@ -602,6 +609,25 @@ video {
   font-weight: 700;
 }
 
+.viewer-status {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(238, 244, 250, 0.94), rgba(255, 255, 255, 0.94));
+  color: #52616f;
+  font-weight: 700;
+  text-align: center;
+  pointer-events: none;
+}
+
+.viewer-status.is-hidden {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .input-grid { grid-template-columns: 1fr; }
   .model-container { grid-template-columns: 1fr; }
@@ -611,13 +637,10 @@ video {
   .gallery-close { top: -6px; right: -6px; }
   .gallery-prev { left: 8px; }
   .gallery-next { right: 8px; }
-  .experiment-track { padding-inline: 0; }
   .experiment-card {
-    flex-basis: 92%;
     grid-template-columns: 1fr;
     min-height: auto;
     padding: 16px;
   }
   .experiment-card img { max-height: 300px; }
-  .experiment-nav { display: none; }
 }
