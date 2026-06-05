@@ -229,6 +229,28 @@ video {
   background-color: #EEF4FA;
 }
 
+.sample-description {
+  max-width: 900px;
+  margin: 0 auto 18px;
+  padding: 14px 18px;
+  border-left: 4px solid rgb(54, 125, 189);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  text-align: left;
+}
+
+.sample-description-title {
+  color: #263548;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.sample-description p {
+  margin: 4px 0 0;
+  color: #52616f;
+  line-height: 1.45;
+}
+
 .input-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -355,7 +377,11 @@ video {
   margin-top: 10px;
   color: #667085;
   font-size: 0.88rem;
-  line-height: 1.25;
+  line-height: 1.35;
+}
+
+.input-meta b {
+  color: #263548;
 }
 
 .gallery-modal {

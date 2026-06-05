@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = Array.from(document.querySelectorAll('.input-card'));
   const viewerPred = document.getElementById('modelViewerComparison1');
   const viewerRaw = document.getElementById('modelViewerComparison2');
+  const sampleDescription = document.getElementById('sampleDescription');
   const gallery = document.getElementById('inputGallery');
   const galleryImage = document.getElementById('galleryImage');
   const galleryCount = document.getElementById('galleryCount');
@@ -57,6 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const pred = card.getAttribute('data-pred');
     const raw = card.getAttribute('data-raw');
+    const title = card.getAttribute('data-title');
+    const description = card.getAttribute('data-description');
+
+    if (sampleDescription && title && description) {
+      sampleDescription.innerHTML = `
+        <div class="sample-description-title">${title}</div>
+        <p>${description}</p>
+      `;
+    }
 
     if (viewerPred && pred) {
       setViewerStatus(viewerPred, 'Loading GLB...');
