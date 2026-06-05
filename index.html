@@ -49,8 +49,7 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js?v=20260530"></script>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <script type="module" src="static/js/glb-viewer.js?v=20260605"></script>
   <!-- MathJax 用于在网页中渲染 LaTeX 数学公式 -->
   <script>
     window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
@@ -186,15 +185,13 @@
     <div class="model-container" id="model-compare-wrapper">
       <div class="model-wrapper-comparison">
         <div class="model-label">QVGGT</div>
-        <model-viewer id="modelViewerComparison1" class="glb-viewer" loading="eager" reveal="auto" touch-action="pan-y" environment-image="legacy" src="static/models/QVGGT_1.glb" camera-orbit="0deg 75deg 105%" camera-target="auto auto auto" field-of-view="30deg" zoom-sensitivity="0.2" camera-controls disable-tap interaction-prompt="none" shadow-intensity="0" exposure="1" ar>
-        </model-viewer>
+        <div id="modelViewerComparison1" class="glb-viewer" data-src="static/models/QVGGT_1.glb"></div>
         <div class="viewer-status" data-viewer-status>Loading GLB...</div>
       </div>
 
       <div class="model-wrapper-comparison">
         <div class="model-label">VGGT</div>
-        <model-viewer id="modelViewerComparison2" class="glb-viewer" loading="eager" reveal="auto" touch-action="pan-y" environment-image="legacy" src="static/models/VGGT_1.glb" camera-orbit="0deg 75deg 105%" camera-target="auto auto auto" field-of-view="30deg" zoom-sensitivity="0.2" camera-controls disable-tap interaction-prompt="none" shadow-intensity="0" exposure="1" ar>
-        </model-viewer>
+        <div id="modelViewerComparison2" class="glb-viewer" data-src="static/models/VGGT_1.glb"></div>
         <div class="viewer-status" data-viewer-status>Loading GLB...</div>
       </div>
     </div>

@@ -20,32 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     status.classList.toggle('is-hidden', hidden);
   };
 
-  const resetViewerCamera = (viewer) => {
-    if (!viewer) return;
-
-    viewer.setAttribute('camera-orbit', '0deg 75deg 105%');
-    viewer.setAttribute('camera-target', 'auto auto auto');
-    viewer.setAttribute('field-of-view', '30deg');
-    viewer.jumpCameraToGoal?.();
-  };
-
-  const wireGlbViewer = (viewer) => {
-    if (!viewer) return;
-
-    viewer.addEventListener('load', () => {
-      resetViewerCamera(viewer);
-      setViewerStatus(viewer, '', true);
-    });
-
-    viewer.addEventListener('error', () => {
-      const src = viewer.getAttribute('src') || 'selected GLB file';
-      setViewerStatus(viewer, `GLB not found or failed to load: ${src}`);
-    });
-  };
-
-  wireGlbViewer(viewerPred);
-  wireGlbViewer(viewerRaw);
-
   document.querySelectorAll('.collage-cell img').forEach((image) => {
     image.addEventListener('error', () => {
       image.style.display = 'none';
@@ -70,13 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (viewerPred && pred) {
       setViewerStatus(viewerPred, 'Loading GLB...');
-      viewerPred.setAttribute('src', pred);
-      resetViewerCamera(viewerPred);
+      viewerPred.setAttribute('data-src', pred);
+      window.qvggtSetGlbViewerSource?.('modelViewerComparison1', pred);
     }
     if (viewerRaw && raw) {
       setViewerStatus(viewerRaw, 'Loading GLB...');
-      viewerRaw.setAttribute('src', raw);
-      resetViewerCamera(viewerRaw);
+      viewerRaw.setAttribute('data-src', raw);
+      window.qvggtSetGlbViewerSource?.('modelViewerComparison2', raw);
     }
   };
 
