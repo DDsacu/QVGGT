@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+
+outputs/
+.tmp_smoke_images/
+quantization/
+qvggt/runtime/awq_inference_engine/build/
+qvggt/runtime/awq_inference_engine/dist/
+qvggt/runtime/awq_inference_engine/*.egg-info/
+qvggt/runtime/awq_inference_engine/**/*.so

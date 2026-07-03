@@ -1,0 +1,9 @@
+accelerate
+gradio
+matplotlib
+numpy
+packaging
+pillow
+requests
+scipy
+trimesh
